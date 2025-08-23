@@ -1,0 +1,18 @@
+/* Hero.css */
+.hero-text-sticky {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-text-sticky h1 {
+  font-family: var(--ff-serif);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+.hero-text-sticky p {
+  max-width: 45ch;
+  color: var(--clr-muted);
+  font-size: 18px;
+}

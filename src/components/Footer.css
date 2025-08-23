@@ -1,0 +1,58 @@
+/* Footer.css - Styles for the sticky footer in the left column */
+
+.site-footer-sticky {
+  margin-top: auto; /* Pushes the footer to the bottom of the flex container */
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--clr-border);
+  font-size: 14px;
+  color: var(--clr-muted);
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+}
+
+.contact-info {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-info p {
+  margin: 0;
+  font-weight: 700;
+  color: var(--clr-text);
+}
+
+.contact-info a {
+  color: var(--clr-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: var(--clr-accent);
+  text-decoration: underline;
+}
+
+.copyright {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+}
+
+.site-footer-sticky {
+  margin-top: auto; /* Pushes the footer to the bottom of the left column */
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--clr-border);
+  font-size: 14px;
+  color: var(--clr-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-footer-sticky a {
+  color: var(--clr-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer-sticky a:hover {
+  color: var(--clr-accent);
+  text-decoration: none;
+}

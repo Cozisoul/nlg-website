@@ -1,0 +1,29 @@
+.process-grid {
+  display: grid;
+  /* Creates a responsive grid that wraps to the next line on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.process-item {
+  padding-right: var(--space-md);
+}
+
+.process-number {
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  color: var(--clr-accent);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.process-item-title {
+  font-family: var(--ff-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.process-item-description {
+  color: var(--clr-muted);
+}

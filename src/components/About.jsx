@@ -1,21 +1,20 @@
 import React from 'react';
-import { AppData } from '../content/data';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import './About.css';
 
-function About() {
+function About({ content }) {
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
   return (
-    <section id="about" className="section">
-      <h2 className="section-title">The Office</h2>
-      <div className="office-grid">
-        <div className="office-bio">
-          <p>{AppData.ABOUT_DATA.summary}</p>
-        </div>
-        <div className="office-members">
-          {AppData.ABOUT_DATA.members.map(member => (
-            <p key={member.name}><strong>{member.name}</strong> — {member.role}</p>
-          ))}
-        </div>
+    <section ref={ref} id="about" className={`section ${isVisible ? 'is-visible' : ''}`}>
+      <h2 className="section-title">{content.title}</h2>
+      <div className="about-text">
+        {content.text.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
     </section>
   );
 }
+
 export default About;

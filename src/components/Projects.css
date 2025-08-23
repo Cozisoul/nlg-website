@@ -1,0 +1,70 @@
+.section-title {
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column for mobile */
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--clr-border);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* On larger screens, switch to two columns */
+@media (min-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-lg);
+  }
+}
+
+
+.project-card:hover {
+  background-color: #fafafa; /* Subtle hover effect */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background-color: var(--clr-border); /* Placeholder background */
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-family: var(--ff-serif);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.project-meta {
+  font-family: var(--ff-mono);
+  font-size: 14px;
+  color: var(--clr-muted);
+  margin-bottom: var(--space-md);
+}
+
+.project-description {
+  max-width: 60ch;
+  flex-grow: 1; /* Pushes the link to the bottom */
+}

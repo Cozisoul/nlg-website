@@ -1,20 +1,15 @@
 import React from 'react';
-import { AppData } from '../content/data';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import './Projects.css';
 
-function Process() {
+function Projects({ content }) {
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
   return (
-    <section id="process" className="section">
-      <h2 className="section-title">Process</h2>
-      <div className="process-grid">
-        {AppData.PROCESS_DATA.map((item) => (
-          <div className="process-item" key={item.number}>
-            <span className="process-number">{item.number}</span>
-            <h3 className="process-title">{item.title}</h3>
-            <p className="process-description">{item.description}</p>
-          </div>
-        ))}
-      </div>
+    <section ref={ref} id="projects" className={`section ${isVisible ? 'is-visible' : ''}`}>
+      <h2 className="section-title">{content.title}</h2>
+      {/* ... the rest of your projects grid ... */}
     </section>
   );
 }
-export default Process;
+export default Projects;

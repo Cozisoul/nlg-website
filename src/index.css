@@ -1,0 +1,82 @@
+/* --- 1. Design Tokens (The "System") --- */
+:root {
+  --clr-bg: #FFFFFF;
+  --clr-text: #111111;
+  --clr-accent: #0000FF; /* Blueprint Blue */
+  --clr-muted: #666666;
+  --clr-border: #EAEAEA;
+  
+  --ff-primary: 'Satoshi', 'Helvetica Neue', sans-serif;
+  --ff-serif: 'Clash Display', serif;
+  --ff-mono: 'Menlo', 'Courier New', monospace;
+
+  --space-unit: 1rem;
+  --space-xs: calc(var(--space-unit) * 0.5);
+  --space-sm: var(--space-unit);
+  --space-md: calc(var(--space-unit) * 1.5);
+  --space-lg: calc(var(--space-unit) * 2.5);
+  --space-xl: calc(var(--space-unit) * 4);
+}
+
+/* --- 2. Font Faces --- */
+/* This assumes you have font files in src/assets/fonts/ */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/assets/fonts/ClashDisplay-Variable.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+/* --- 3. Base & Reset --- */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--ff-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, h5, h6, p, ul { margin: 0; }
+ul { list-style: none; padding: 0; }
+img { display: block; max-width: 100%; }
+
+/* --- 4. Main Layout --- */
+.site-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.left-column {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: var(--space-lg);
+  border-right: 1px solid var(--clr-border);
+  display: flex;
+  flex-direction: column;
+}
+.right-column { padding: var(--space-lg); }
+
+/* --- 5. Scroll Animations --- */
+.section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hero-visual { /* Hero is visible on load */
+    opacity: 1;
+    transform: none;
+}

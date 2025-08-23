@@ -1,15 +1,18 @@
 import React from 'react';
+import './Footer.css';
 
-function Footer() {
+function Footer({ content }) {
   return (
-    <footer className="site-footer section">
-      <div className="footer-contact">
-        <a href="mailto:info@nlg-engineers.com" className="footer-link">GET IN TOUCH</a>
+    <footer className="site-footer-sticky" id="contact">
+      <div className="contact-info">
+        <p>{content.name}</p>
+        <a href={`mailto:${content.email}`}>{content.email}</a>
       </div>
-      <div className="footer-copyright">
-        © 2025 NLG Structural Engineers
+      <div className="copyright">
+        {content.copyright}
       </div>
     </footer>
   );
 }
+
 export default Footer;
