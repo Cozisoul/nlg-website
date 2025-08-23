@@ -1,0 +1,49 @@
+/* --- 04-layout.css (The Architecture) --- */
+.site-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-7);
+}
+
+.section {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.section-title {
+    font-family: var(--ff-mono);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-muted);
+    margin-bottom: var(--space-6);
+    font-weight: 400;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+}
+
+.casestudies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-5);
+}
+
+.office-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-8);
+    align-items: end;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: var(--space-6);
+    border-bottom: none; /* Footer is the last element */
+}

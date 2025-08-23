@@ -1,0 +1,20 @@
+/* --- 02-vars.css (The NLG Design Tokens) --- */
+:root {
+  /* Palette: The Blueprint */
+  --clr-bg:        #FFFFFF;
+  --clr-text:      #111111;
+  --clr-accent:    #0000FF;
+  --clr-muted:     #666666;
+  --clr-border:    #e0e0e0;
+
+  /* Typography */
+  --ff-primary:   'Helvetica Neue', Helvetica, sans-serif;
+  --ff-mono:      'Menlo', 'Courier New', monospace;
+
+  /* Spacing (Systematic 8px Grid) */
+  --space-1: 4px; --space-2: 8px; --space-3: 16px; --space-4: 24px;
+  --space-5: 32px; --space-6: 48px; --space-7: 64px; --space-8: 96px;
+
+  /* Animation */
+  --anim-duration: .4s;
+}
