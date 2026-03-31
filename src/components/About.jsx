@@ -8,8 +8,9 @@ function About({ content }) {
   return (
     <section ref={ref} id="about" className={`section ${isVisible ? 'is-visible' : ''}`}>
       <h2 className="section-title">{content.title}</h2>
-      <div className="about-text">
-        {content.text.map((paragraph, index) => (
+      
+      <div className="about-grid">
+        {content.paragraphs.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>

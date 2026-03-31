@@ -8,7 +8,9 @@ export function useIntersectionObserver(options) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
-        observer.unobserve(entry.target);
+        if (entry.target) {
+            observer.unobserve(entry.target);
+        }
       }
     }, options);
 

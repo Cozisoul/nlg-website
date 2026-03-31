@@ -1,12 +1,25 @@
 .process-grid {
   display: grid;
-  /* Creates a responsive grid that wraps to the next line on smaller screens */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-lg);
+  /* On small screens, default to a single column for readability */
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* On screens wider than 768px, switch to a 3-column grid */
+@media (min-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
 }
 
 .process-item {
   padding-right: var(--space-md);
+    margin-bottom: var(--space-lg);
+
 }
 
 .process-number {
@@ -18,7 +31,7 @@
 }
 
 .process-item-title {
-  font-family: var(--ff-primary);
+  font-family: var(--ff-primary); /* Using primary for consistency, can be serif too */
   font-size: 20px;
   font-weight: 700;
   margin-bottom: var(--space-sm);
@@ -26,4 +39,5 @@
 
 .process-item-description {
   color: var(--clr-muted);
+  
 }

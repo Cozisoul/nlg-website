@@ -10,9 +10,11 @@
     <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./main.jsx"></script>
+    <!-- This path is CRITICAL. It tells the browser to look for main.jsx inside the src folder. -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
